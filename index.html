@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link href="lib/mocha.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="mocha"></div>
+
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+
+  <script>
+    mocha.setup('bdd')
+    const assert = chai.assert;
+    const expect = chai.expect;
+  </script>
+
+  <!-- start of test files -->
+  <script src="exercises/string.js"></script>
+
+  <!-- end of test files -->
+
+  <script>
+    mocha.checkLeaks();
+    mocha.globals(['jQuery']);
+    mocha.run();
+  </script>
+</body>
+</html>
